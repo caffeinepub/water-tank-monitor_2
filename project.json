@@ -1,0 +1,23 @@
+{
+  "overview": "AquaTrack is a real-time water tank monitoring dashboard that visualizes water levels, triggers status alerts, and connects to an ESP32 sensor over your local network. Features a dark theme with red accents, simulation mode for testing, and a fully configurable alert system.",
+  "features": [
+    "Live water tank visualization with animated fill (0–100%)",
+    "Status alerts: Safe, Warning, and Danger with configurable thresholds",
+    "Simulation slider to test levels and alerts without live data",
+    "Configurable ESP32 API endpoint, device name, location, and threshold",
+    "Auto-refresh every 2 seconds from live sensor data",
+    "Reading history with area chart and last 24 entries",
+    "Dark black theme with bright red accents",
+    "Responsive layout with sidebar, main tank view, and metrics panel"
+  ],
+  "category": "productivity",
+  "tags": [
+    "water-monitoring",
+    "iot",
+    "esp32",
+    "dashboard",
+    "real-time",
+    "sensors"
+  ],
+  "last_updated": "2026-04-08T04:04:42.849Z"
+}

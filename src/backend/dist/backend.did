@@ -1,0 +1,21 @@
+type Reading = 
+ record {
+   level: float64;
+   status: text;
+   timestamp: int;
+ };
+type Config = 
+ record {
+   alertThreshold: float64;
+   alertsEnabled: bool;
+   apiEndpoint: text;
+   deviceName: text;
+   location: text;
+ };
+service : {
+  addReading: (level: float64, status: text) -> ();
+  fetchWaterLevel: (endpoint: text) -> (float64);
+  getConfig: () -> (Config) query;
+  getReadings: () -> (vec Reading) query;
+  updateConfig: (newConfig: Config) -> ();
+}

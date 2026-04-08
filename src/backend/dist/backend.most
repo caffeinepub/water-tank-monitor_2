@@ -1,0 +1,35 @@
+// Version: 3.0.0
+type List__415060402<T> = List__790383201<T>;
+type List__790383201<T> =
+  {
+    var blockIndex : Nat__490723111;
+    var blocks : [var [var ?T]];
+    var elementIndex : Nat__490723111
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type OldConfig__170260309 =
+  {alertThreshold : Float; endpointURL : Text; location : Text; name : Text};
+type OldReading__154782728 = {level : Float; timestamp : Int};
+type Reading__171877758 = {level : Float; status : Text; timestamp : Int};
+actor ({
+  in var config : OldConfig__170260309;
+  stable maxReadings : Nat;
+  in readings : List__415060402<OldReading__154782728>
+}, {
+  stable var config :
+    {
+      alertThreshold : Float;
+      alertsEnabled : Bool;
+      apiEndpoint : Text;
+      deviceName : Text;
+      location : Text
+    };
+  stable maxReadings : Nat;
+  stable readings :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Reading__171877758]];
+      var elementIndex : Nat__490723111
+    }
+}) ;
